@@ -1,3 +1,7 @@
+This is the React tutorial from the official React Website
+- Link: https://react.dev/learn/tutorial-tic-tac-toe
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
