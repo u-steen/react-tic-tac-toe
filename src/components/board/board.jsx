@@ -4,12 +4,23 @@ import { useState, Fragment} from 'react'
 
 const Board = () => {
     const [squares, setSquares] = useState(Array(9).fill(null));
+    const [isXNext, setisXNext] = useState(true);
 
     const handleClick = (i) => {
-        console.log('clicked');
+        if(squares[i])
+            return
+
         const squaresCopy = squares.slice();
-        squaresCopy[i] = 'X';
+
+        if(isXNext){
+            squaresCopy[i] = 'X';
+        }
+        else{
+            squaresCopy[i] = '0';
+        }
+
         setSquares(squaresCopy);
+        setisXNext(!isXNext);
     }
 return (
         <Fragment> 
@@ -18,6 +29,7 @@ return (
                 <Square value={squares[1]} handleClickFn={ () => {handleClick(1)}}/>
                 <Square value={squares[2]} handleClickFn={ () => {handleClick(2)}}/>
             </div>
+    
             <div className="board-row">
                 <Square value={squares[3]} handleClickFn={ () => {handleClick(3)}}/>
                 <Square value={squares[4]} handleClickFn={ () => {handleClick(4)}}/>
