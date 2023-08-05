@@ -1,12 +1,12 @@
 // Components
-import Board from '../src/components/board/board.jsx'
+import Game from "./components/game/game.jsx"
 
 // Style
 import './App.css'
 
 const App = () => {
     return (
-        <Board />
+        <Game />
    )
 }
 
